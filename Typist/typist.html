@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Typist - An Internet Typewriter</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="icon" type="image/x-icon" href="images/android-chrome-512x512.png">
+    <link rel="stylesheet" href="style-2.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <script>
+          function save(){
+            var text = document.getElementById("bar").value;
+            text = text.replace(/\n/g, "\r\n");
+            var blob = new Blob([text], { type: "text/plain"});
+            var anchor = document.createElement("a");
+            anchor.download = "document.txt";
+            anchor.href = window.URL.createObjectURL(blob);
+            anchor.target ="_blank";
+            anchor.style.display = "none";
+            document.body.appendChild(anchor);
+            anchor.click();
+            document.body.removeChild(anchor);
+          }
+          </script>
+        <textarea
+          name="saisie"
+          id="bar"
+          onkeyup="transcribe()"
+          class="cadr"
+          rows="12"
+          placeholder="Start Typing here..."
+        ></textarea>
+      </div>
+      <input type="button" class="bf" onclick="save()" value="Save">
+      <div class="reload">
+        <a href="typist.html">Reload (All changes will be lost)</a>
+    </div>
+    <div class="home">
+      <a href="index.html"><br> Back to Home <br><br><b><br><br></b></a>
+    </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

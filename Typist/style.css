@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'Courier New', Courier, monospace;
+    background-color: black;
+}
+.heading{
+    color: #00ff00;
+    font-size: 25px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 35px;
+    text-shadow: 2px 2px green;
+}
+@media screen and (max-width: 600px){
+    .heading{
+        margin-top: 35px;
+        font-size: 25px;
+    }
+    .container p{
+        margin-left: -40px;
+        margin-right: -40px;
+    }
+    .features h2{
+        font-size: 20px;
+    }
+    .features p{
+        display: none;
+    }
+
+}
+.credits{
+    font-size: 19px;
+    color: #00ff00;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+.credits a{
+    color: #00ff00;
+    text-decoration: underline;
+}
+.credits a:hover{
+    text-decoration: none;
+}
+.container{
+    font-size: 19px;
+    color: #00ff00;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+.features{
+    font-size: 17px;
+    margin-top: 59px;
+    color: #00ff00;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.features  h2{
+    margin-top: 25px;
+    text-align: center;
+}
+.features  p{
+    margin-top: 10px;
+    text-align: center;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+.button{
+    color: #00ff00;
+    font-size: 30px;
+    margin-top: 50px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.button a{
+    color: #00ff00;
+}
+.button a:hover{
+    text-decoration: none;
+}
+.feedback h1{
+    color: #00ff00;
+    font-size: 35px;
+    margin-top: 50px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.feedback p{
+    color: #00ff00;
+    font-size: 17px;
+    margin-top: 10px;
+    text-align: center;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+.feedback a{
+    color: #00ff00;
+}
+.feedback a:hover{
+    text-decoration: none;
+}
+.copyright{
+    margin-top: 30px;
+    color: #00ff00;
+    text-align: center;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+}
+
+
+.loader{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background-color: #16191e;
+    position: absolute;
+}
+.loader>div{
+    height: 100px;
+    width: 100px;
+    border: 15px solid #45474b;
+    border-top-color: #2a88e6;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 50%;
+    animation: spin 1.5s infinite linear;
+}
+@keyframes spin{
+    100%{
+        transform: rotate(360deg);
+    }
+}
